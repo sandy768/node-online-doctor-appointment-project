@@ -1,0 +1,68 @@
+<%-include('../includes/header.ejs')%>
+<title>
+    <%=title%>
+</title>
+</head>
+<body>
+    <%-include('../includes/nav_admin.ejs')%>
+    <main>
+        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Admin Only</h1>
+        <h2 class="text-center text-secondary fw-semibold mb-3">All Doctors List</h2>
+        <%if(data.length>0){%>
+            <div class="mt-5 mb-5 ms-5 me-5">
+                <table class="table table-success table-hover" cellpadding="5px">
+                    <thead>
+                      <tr class="text-center">
+                        <th scope="col">Serial No.</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Degree</th>
+                        <th scope="col">Experience</th>
+                        <th scope="col">Specialization</th>
+                        <th scope="col">Visiting Days</th>
+                        <th scope="col">Fees (In ₹)</th>
+                        <th scope="col">Email Id</th>
+                        <th scope="col">Photo</th>
+                        <th scope="col">Modify</th>
+                        <th scope="col">Remove</th>
+                      </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <%for(let i=0;i<data.length;i++){%>
+                        <tr class="text-center">
+                                <td><%=i+1%>.</td>
+                                    <td><%=data[i].doc_name%></td>
+                                    <td><%=data[i].doc_degree%></td>
+                                    <td><%=data[i].doc_experience%></td>
+                                    <td><%=data[i].doc_specialization%></td>
+                                    <td>
+                                    <%for(let j in data[i].doc_visit_days){%>
+                                        <%=data[i].doc_visit_days[j]%>
+                                    <%}%>
+                                    </td>
+                                    <td><%=data[i].doc_fees%></td>
+                                    <td><%=data[i].doc_email%></td>
+                                    <td><img src="/doctors/<%=data[i].doc_photo%>" alt="..." height="50px" width="50px"></td>
+                                    <td>
+                                        <form action="/admin/update" method="POST">
+                                            <input type="hidden" name="doc_id" id="doc_id" value="<%=data[i]._id%>">
+                                            <input type="submit" class="btn btn-warning" value="Update">
+                                        </form>
+                                    </td>
+    
+                                    <td>
+                                        <form action="/admin/deletedata" method="POST">
+                                            <input type="hidden" name="doc_id" id="doc_id" value="<%=data[i]._id%>">
+                                            <input type="submit" class="btn btn-danger" value="Delete">
+                                        </form>
+                                    </td>   
+                                </tr>
+                        <%}%>
+                    </tbody>
+                  </table>
+            </div>
+        <%}else{%>
+            <h1>Content not found</h1>
+        <%}%>
+    </main>
+<%-include('../includes/footer.ejs')%>

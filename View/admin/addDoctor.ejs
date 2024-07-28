@@ -1,0 +1,81 @@
+<%-include('../includes/header.ejs')%>
+<link rel="stylesheet" href="/js/multiselect.js">
+<title>
+    <%=title%>
+</title>
+</head>
+<body>
+    <%-include('../includes/nav_admin.ejs')%>
+    <main>
+        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Admin Only</h1>
+        <h2 class="text-center text-secondary fw-semibold mb-3">Add Doctor</h2>
+        <div class="mt-5 mb-5 mx-3">
+            <form action="/admin/docpostdata" method="POST" enctype="multipart/form-data" autocomplete="off">
+                <div class="mb-3">
+                  <label for="doc_name" class="form-label">Doctor Name</label>
+                  <input type="text" class="form-control" name="doc_name" id="doc_name" placeholder="Doctor Name">
+                </div>
+                <div class="mb-3">
+                    <label for="doc_degree" class="form-label">Doctor Degree</label>
+                    <input type="text" class="form-control" name="doc_degree" id="doc_degree" placeholder="Doctor Degree (e.g. MBBS)">
+                </div>
+                <div class="mb-3">
+                    <label for="doc_experience" class="form-label">Doctor Experience</label>
+                    <input type="text" class="form-control" name="doc_experience" id="doc_experience" placeholder="Doctor Experience (In years)">
+                </div>
+                <div class="mb-3">
+                    <label for="doc_specialization" class="form-label">Doctor Specialization</label>
+                    <input type="text" class="form-control" name="doc_specialization" id="doc_specialization" placeholder="Doctor Specialization (e.g. Cardiologist)">
+                </div>
+                <div class="mb-3">
+                    <label for="doc_visit_days" class="form-label">Visit Days</label>
+                    <div class="mt-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="monday">
+                            <label class="form-check-label" for="doc_visit_days">Monday</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="tuesday">
+                            <label class="form-check-label" for="doc_visit_days">Tuesday</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="wednesday">
+                            <label class="form-check-label" for="doc_visit_days">Wednesday</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="thursday">
+                            <label class="form-check-label" for="doc_visit_days">Thursday</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="friday">
+                            <label class="form-check-label" for="doc_visit_days">Friday</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="saturday">
+                            <label class="form-check-label" for="doc_visit_days">Saturday</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="doc_visit_days" id="doc_visit_days" value="sunday">
+                            <label class="form-check-label" for="doc_visit_days">Sunday</label>
+                          </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label for="doc_fees" class="form-label">Doctor Fees</label>
+                    <input type="number" class="form-control" name="doc_fees" id="doc_fees" placeholder="Doctor Fees (In ₹)">
+                </div>
+                <div class="mb-3">
+                  <label for="doc_email" class="form-label">Doctor Email</label>
+                  <input type="email" class="form-control" name="doc_email" id="doc_email" placeholder="Doctor Email (e.g. abc@gmail.com)">
+              </div>
+                <div class="mb-3">
+                    <label for="doc_photo" class="form-label">Doctor Photo</label>
+                    <input type="file" class="form-control" name="doc_photo" id="doc_photo">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-lg btn-primary">Add Doctor</button>
+                </div>
+              </form>
+        </div>
+    </main>
+<%-include('../includes/footer.ejs')%>
