@@ -1,0 +1,28 @@
+<%-include('../includes/header.ejs')%>
+<title>
+    <%=title%>
+</title>
+</head>
+<body>
+    <%-include('../includes/nav_user.ejs')%>
+    <main>
+        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Patient Only</h1>
+        <h2 class="text-center text-secondary fw-semibold mb-3">Password Recovery</h2>
+        <div class="mt-5 mb-5 mx-3">
+            <form action="/recovery/emailpostdata" method="POST" autocomplete="off">
+                <div class="mb-3">
+                    <p class="text-success fw-semibold fs-5"><%=recovery_mail%></p>
+                </div>
+                <div class="mb-3">
+                    <p class="text-danger fw-semibold fs-5"><%=error_mail_recovery%></p>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Id</label>
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email Id">
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-lg btn-success mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>

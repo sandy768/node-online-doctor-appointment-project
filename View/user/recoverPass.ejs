@@ -1,0 +1,31 @@
+<%-include('../includes/header.ejs')%>
+<title>
+    <%=title%>
+</title>
+</head>
+<body>
+    <%-include('../includes/nav_user.ejs')%>
+    <main>
+        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Patient Only</h1>
+        <h2 class="text-center text-secondary fw-semibold mb-3">Password Recovery</h2>
+        <div class="mt-5 mb-5 mx-3">
+            <form action="/patient/postpasswordrecovery" method="POST" autocomplete="off">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Id</label>
+                    <input type="email" class="form-control" name="email" id="email" value="<%=data.patient_email%>" readonly>
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" placeholder="Reset Your Password">
+                </div>
+                <div class="mb-3">
+                    <label for="cnf_password" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" name="cnf_password" id="cnf_password" placeholder="Confirm Your Password">
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <button type="submit" class="btn btn-lg btn-success">Update</button>
+                </div>
+            </form>
+        </div>
+    </main>
+<%-include('../includes/footer.ejs')%>

@@ -33,6 +33,10 @@ const patientSchema=new Schema({
     patient_docs:{
         type:[String],
         required:true
+    },
+    isVerify:{
+        type:Boolean,
+        default:false
     }
 },{
     timestamps:true,

@@ -1,0 +1,36 @@
+<%-include('../includes/header.ejs')%>
+<title>
+    <%=title%>
+</title>
+</head>
+<body>
+    <%-include('../includes/nav_user.ejs')%>
+    <main>
+        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Patient Only</h1>
+        <h2 class="text-center text-secondary fw-semibold mb-3">Sign In</h2>
+        <div class="mt-5 mb-5 mx-3">
+            <form action="" method="POST" autocomplete="off">
+                <div class="mb-3">
+                    <p class="text-success fw-semibold fs-5"><%=success_verify%></p>
+                </div>
+                <div class="mb-3">
+                    <p class="text-success fw-semibold fs-5"><%=update_password%></p>
+                </div>
+                <div class="mb-3">
+                    <label for="login_email" class="form-label">Email Id</label>
+                    <input type="email" class="form-control" name="login_email" id="login_email" placeholder="Your Email Id">
+                </div>
+                <div class="mb-3">
+                    <label for="login_password" class="form-label">Password</label>
+                    <input type="password" class="form-control" name="login_password" id="login_password" placeholder="Your Password">
+                </div>
+                <div class="d-flex justify-content-center mt-5">
+                    <button type="submit" class="btn btn-lg btn-success">Login</button>
+                </div>
+                <div class="d-flex justify-content-center mt-2">
+                    <a href="/recovery/email" class="text-success">Forgot password</a>
+                </div>
+            </form>
+        </div>
+    </main>
+<%-include('../includes/footer.ejs')%>

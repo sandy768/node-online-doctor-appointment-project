@@ -4,6 +4,8 @@ const appServer=express();
 const PORT=process.env.PORT||5700;
 const mongoose=require('mongoose');
 const path=require('path');
+const session=require('express-session');
+const flash=require('connect-flash');
 
 const switchRouter=require('./Router/switchRouter');
 const adminRouter=require('./Router/adminRouter');
@@ -15,6 +17,14 @@ appServer.set('views','View');
 appServer.use(express.urlencoded({extended:true}));
 appServer.use(express.static(path.join(__dirname,'Public')));
 appServer.use(express.static(path.join(__dirname,'uploads')));
+
+appServer.use(session({
+    secret:'secret9h6f738hs829ty237ht7hsuj',
+    resave:false,
+    saveUninitialized:false
+}))
+
+appServer.use(flash());
 
 appServer.use(switchRouter);
 appServer.use(adminRouter);

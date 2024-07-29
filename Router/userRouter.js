@@ -2,7 +2,7 @@ const express=require('express');
 const router=express.Router();
 const multer=require('multer');
 const path=require('path');
-const {getRegistration,postRegistration} = require('../Controller/userController');
+const {getRegistration,postRegistration,mailConfirmation,getLogin,getEmail,postEmail,getRecoverPass,postRecoverPass} = require('../Controller/userController');
 
 const fileStorage=multer.diskStorage({
     destination:(req,file,callback)=>{
@@ -39,6 +39,20 @@ const upload_type=upload.fields([
     {name:"patient_docs",maxCount:2},
 ]);
 
+// user registration
 router.get('/user/registration',getRegistration);
 router.post('/user/postreg',upload_type,postRegistration);
+
+// email verification
+router.get('/patient_mail_confirmation/:email/:token',mailConfirmation);
+
+// user login
+router.get('/user/viewlogin',getLogin);
+
+// password recovery
+router.get('/recovery/email',getEmail);
+router.post('/recovery/emailpostdata',postEmail);
+router.get('/patient/getpasswordrecovery/:email',getRecoverPass);
+router.post('/patient/postpasswordrecovery',postRecoverPass);
+
 module.exports=router;
