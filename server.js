@@ -6,6 +6,7 @@ const mongoose=require('mongoose');
 const path=require('path');
 const session=require('express-session');
 const flash=require('connect-flash');
+const cookieParser=require('cookie-parser');
 
 const switchRouter=require('./Router/switchRouter');
 const adminRouter=require('./Router/adminRouter');
@@ -25,7 +26,7 @@ appServer.use(session({
 }))
 
 appServer.use(flash());
-
+appServer.use(cookieParser());
 appServer.use(switchRouter);
 appServer.use(adminRouter);
 appServer.use(userRouter);

@@ -8,10 +8,13 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link  fs-5" aria-current="page" href="/user/registration">Sign Up</a>
+                <a class="nav-link  fs-5 <%=path==='/user/registration'?'active':' '%>" aria-current="page" href="/user/registration">Sign Up</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link fs-5" aria-current="page" href="/user/viewlogin">Sign In</a>
+                <a class="nav-link fs-5 <%=path==='/user/viewlogin'?'active':' '%>" aria-current="page" href="/user/viewlogin">Sign In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link fs-5 <%=path==='/user/viewProfile'?'active':' '%>" aria-current="page" href="/user/viewProfile">Patient Profile</a>
               </li>
             </ul>
           </div>

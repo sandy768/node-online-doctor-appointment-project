@@ -29,6 +29,7 @@ const getRegistration=(req,res)=>{
 
     res.render('user/registration',{
         title:"Patient Registration",
+        path:'/user/registration',
         email_success:mail_success,
         error_mail:mail_error,
         error_verify:verifyError
@@ -110,7 +111,7 @@ const mailConfirmation=async(req,res)=>{
             else{
                 patient_data.isVerify=true;
                 let save_data=await patient_data.save();
-                console.log("Saved patient details",save_details);
+                // console.log("Saved patient details",save_details);
                 if(save_data){
                     req.flash('success-verify','Successfully verified, sign in now');
                     res.redirect('/user/viewlogin');
@@ -130,11 +131,56 @@ const getLogin=(req,res)=>{
     let updatePass=req.flash('up-pass');
     let passUpdate=updatePass.length>0?updatePass[0]:null;
 
+    let errPassMatch=req.flash('err-pass-match');
+    let passMatchErr=errPassMatch.length>0?errPassMatch[0]:null;
+
+    let errMailMatch=req.flash('err-mail-match');
+    let mailMatchErr=errMailMatch.length>0?errMailMatch[0]:null;
+
+    let errLog=req.flash('err-log');
+    let logErr=errLog.length>0?errLog[0]:null;
+
     res.render('user/login',{
         title:"Patient Login",
+        path:'/user/viewlogin',
         success_verify:verifySuccess,
-        update_password:passUpdate
+        update_password:passUpdate,
+        error_pass_match:passMatchErr,
+        error_mail_match:mailMatchErr,
+        error_log:logErr
+
     })
+}
+const postLogin=async(req,res)=>{
+    try{
+        // console.log("Collected Login data:",req.body);
+        let log_details=await patientModel.findOne({patient_email:req.body.login_email});
+        if(log_details){
+            let pass_verify=await bcrypt.compare(req.body.login_password,log_details.patient_password);
+            if(pass_verify){
+                let token_payload={patientData:log_details};
+                let token_jwt=jwt.sign(token_payload,process.env.SECRET_KEY,{
+                    expiresIn:"1h",
+                });
+                res.cookie("token_data",token_jwt,{
+                    expires:new Date(Date.now()+3600000),
+                    httpOnly:true,
+                });
+                res.redirect('/user/viewProfile');
+            }
+            else{
+                req.flash('err-pass-match','Incorrect Password');
+                res.redirect('/user/viewlogin');
+            }
+        }
+        else{
+            req.flash('err-mail-match','Invalid Email Id');
+            res.redirect('/user/viewlogin');
+        }
+    }
+    catch(err){
+        console.log("Error to collect login data",err);
+    }
 }
 
 const getEmail=(req,res)=>{
@@ -230,6 +276,7 @@ module.exports={
     postRegistration,
     mailConfirmation,
     getLogin,
+    postLogin,
     getEmail,
     postEmail,
     getRecoverPass,

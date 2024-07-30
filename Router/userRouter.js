@@ -2,7 +2,25 @@ const express=require('express');
 const router=express.Router();
 const multer=require('multer');
 const path=require('path');
-const {getRegistration,postRegistration,mailConfirmation,getLogin,getEmail,postEmail,getRecoverPass,postRecoverPass} = require('../Controller/userController');
+const AuthJwt=require('../Middle-ware/isAuth');
+
+const {
+getRegistration,
+postRegistration,
+mailConfirmation,
+getLogin,
+postLogin,
+getEmail,
+postEmail,
+getRecoverPass,
+postRecoverPass
+} = require('../Controller/userController');
+
+const {
+userAuth,
+patientProfile,
+logOut
+} = require('../Controller/userDashboard');
 
 const fileStorage=multer.diskStorage({
     destination:(req,file,callback)=>{
@@ -48,11 +66,18 @@ router.get('/patient_mail_confirmation/:email/:token',mailConfirmation);
 
 // user login
 router.get('/user/viewlogin',getLogin);
+router.post('/user/postlogin',postLogin);
 
 // password recovery
 router.get('/recovery/email',getEmail);
 router.post('/recovery/emailpostdata',postEmail);
 router.get('/patient/getpasswordrecovery/:email',getRecoverPass);
 router.post('/patient/postpasswordrecovery',postRecoverPass);
+
+// user profile
+router.get('/user/viewProfile',AuthJwt.authJwt,userAuth,patientProfile);
+
+// profile logout
+router.get('/user/logout',logOut);
 
 module.exports=router;
