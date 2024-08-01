@@ -17,13 +17,19 @@
                 <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/viewlogin'?'active_nav':' '%>" aria-current="page" href="/user/viewlogin">Sign In</a>
               </li>
               <li class="nav-item ms-3">
-                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/viewProfile'?'active_nav':' '%>" aria-current="page" href="/user/viewProfile">Patient Profile</a>
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/viewProfile'?'active_nav':' '%>" aria-current="page" href="/user/viewProfile">Your Profile</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/getdoctorlist'?'active_nav':' '%>" aria-current="page" href="/user/getdoctorlist">Our Doctors</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/getappointment'?'active_nav':' '%>" aria-current="page" href="/user/getappointment">Get Appointment</a>
               </li>
             </ul>
           </div>
           <div class="d-flex flex-end mt-2">
-              <a href="" class="btn btn-light me-3 nav-btn">Sign Up</a>
-              <a href="" class="btn btn-light me-2 nav-btn">Sign In</a>
+              <a href="/user/registration" class="btn btn-light me-3 nav-btn">Sign Up</a>
+              <a href="/user/viewlogin" class="btn btn-light me-2 nav-btn">Sign In</a>
           </div>
         </div>
       </nav>

@@ -24,5 +24,13 @@
                 </div>
               </div>
         </div>
+        <form action="/user/postuserdata" method="POST">
+          <input class="mx-5" type="hidden" name="pid" id="pid" value="<%=data._id%>">
+          <div class="mt-5 mb-5 d-flex justify-content-center">
+            <p class="fs-6 mt-3">Get appointment from our doctors?</p>
+            <input type="submit" value="Click here" class="btn btn-sm btn-success mx-2">
+          </div>
+          
+        </form>
     </main>
 <%-include('../includes/footer.ejs')%>
