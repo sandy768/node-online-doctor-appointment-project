@@ -1,0 +1,206 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#one{
+    background-image: url("../images/banner1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 800px;
+    z-index: 1;
+}
+#two{
+    background-image: url("../images/banner2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 800px;
+    z-index: 1;
+}
+#three{
+    background-image: url("../images/banner3.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 800px;
+    z-index: 1;
+}
+.nav-btn{
+    height:41px;
+    width: 120px;
+    font-size: 18px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkslategrey;
+    letter-spacing: 1px;
+}
+.nav-btn:hover{
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+.para1{
+    margin-top: 17rem;
+    margin-left: 12rem;
+    font-size: 18px;
+    /* font-weight: bold; */
+    font-family:'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    z-index: 2;
+}
+.para2{
+    margin-top: 3rem;
+    margin-left: 12rem;
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    z-index: 2;
+}
+.btn1{
+    margin-top: 3rem;
+    margin-left: 12rem;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    background-color: rgb(202, 202, 202);
+    height: 42px;
+    width: 170px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(20, 36, 36);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    z-index: 2;
+}
+.btn1:hover{
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    cursor: pointer;
+}
+.about{
+    height: 900px;
+    background-color:rgb(222, 245, 237);
+}
+#abt1{
+    height: 300px;
+    width: 700px;
+}
+.para3{
+    padding-top: 11rem;
+    padding-left: 12rem;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.para4{
+    padding-top: 3rem;
+    padding-left: 12rem;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.para5{
+    padding-top: 1rem;
+    padding-left: 12rem;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.btn2{
+    margin-top: 3rem;
+    margin-left: 12rem;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    background-color: rgb(34, 63, 63);
+    height: 42px;
+    width: 170px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.btn2:hover{
+    background-color: transparent;
+    border: 2px solid  rgb(34, 63, 63);
+    color: rgb(34, 63, 63);
+    cursor: pointer;
+}
+#abt2{
+    height: 400px;
+    width: 400px;
+    margin-top: 6rem;
+    margin-left: 11rem;
+}
+#crd1{
+    height: 320px;
+    background-image:linear-gradient(60deg, rgb(43, 85, 85),rgb(96, 96, 160));
+}
+#para6{
+    padding-top: 45px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#para7{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#para8{
+    padding-top: 13px;
+    /* padding-bottom: 17px; */
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#para9{
+    padding-top: 45px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}

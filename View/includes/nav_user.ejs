@@ -1,22 +1,29 @@
 <header>
-    <nav class="navbar navbar-expand-lg bg-light sticky-top">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar Logo</a>
+          <a class="navbar-brand text-light mt-2" href="#">Navbar Logo</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link  fs-5 <%=path==='/user/registration'?'active':' '%>" aria-current="page" href="/user/registration">Sign Up</a>
+            <ul class="navbar-nav me-auto mx-5 mt-2 mb-2 mb-lg-0">
+              <li class="nav-item ms-5">
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/home'?'active_nav':' '%>" aria-current="page" href="/user/home">Home</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5 <%=path==='/user/viewlogin'?'active':' '%>" aria-current="page" href="/user/viewlogin">Sign In</a>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/registration'?'active_nav':' '%>" aria-current="page" href="/user/registration">Sign Up</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link fs-5 <%=path==='/user/viewProfile'?'active':' '%>" aria-current="page" href="/user/viewProfile">Patient Profile</a>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/viewlogin'?'active_nav':' '%>" aria-current="page" href="/user/viewlogin">Sign In</a>
+              </li>
+              <li class="nav-item ms-3">
+                <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/viewProfile'?'active_nav':' '%>" aria-current="page" href="/user/viewProfile">Patient Profile</a>
               </li>
             </ul>
+          </div>
+          <div class="d-flex flex-end mt-2">
+              <a href="" class="btn btn-light me-3 nav-btn">Sign Up</a>
+              <a href="" class="btn btn-light me-2 nav-btn">Sign In</a>
           </div>
         </div>
       </nav>

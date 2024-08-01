@@ -19,7 +19,8 @@ postRecoverPass
 const {
 userAuth,
 patientProfile,
-logOut
+logOut,
+userHome
 } = require('../Controller/userDashboard');
 
 const fileStorage=multer.diskStorage({
@@ -56,6 +57,9 @@ const upload_type=upload.fields([
     {name:"patient_photo",maxCount:1},
     {name:"patient_docs",maxCount:2},
 ]);
+
+// home page
+router.get('/user/home',userHome);
 
 // user registration
 router.get('/user/registration',getRegistration);

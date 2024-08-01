@@ -1,6 +1,13 @@
 const patientModel=require('../Model/patientModel');
 const jwt=require('jsonwebtoken');
 
+const userHome=(req,res)=>{
+    res.render('user/home',{
+        title:"Swasth Rakshak",
+        path:'/user/home'
+    })
+}
+
 const userAuth=async(req,res,next)=>{
     try{
         if(req.user){
@@ -35,6 +42,7 @@ const logOut=async(req,res)=>{
     res.redirect('/user/viewlogin');
 }
 module.exports={
+    userHome,
     userAuth,
     patientProfile,
     logOut
