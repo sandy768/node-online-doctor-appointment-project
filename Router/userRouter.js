@@ -21,10 +21,9 @@ userAuth,
 patientProfile,
 logOut,
 userHome,
-postUserData,
 getDoctorList,
-postSingleDoctor,
-getDocAppointment
+getDocAppointment,
+postDocAppointment
 } = require('../Controller/userDashboard');
 
 const fileStorage=multer.diskStorage({
@@ -89,15 +88,16 @@ router.get('/user/viewProfile',AuthJwt.authJwt,userAuth,patientProfile);
 router.get('/user/logout',logOut);
 
 // post user data to doctor list page
-router.post('/user/postuserdata',postUserData);
+// router.post('/user/postuserdata',postUserData);
 
 // get doctors list
 router.get('/user/getdoctorlist',AuthJwt.authJwt,userAuth,getDoctorList);
 
-// post single doctor details
-router.post('/user/postsingledoctor',postSingleDoctor);
 
 // get appointment page
-router.get('/user/getappointment',AuthJwt.authJwt,userAuth,getDocAppointment);
+router.post('/user/getappointment',getDocAppointment);
+
+// post appointment details
+router.post('/user/postappointment',postDocAppointment);
 
 module.exports=router;

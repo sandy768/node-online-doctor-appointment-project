@@ -8,7 +8,7 @@
     <main>
         
         <h1 class="text-center text-success fw-bold mt-3 mb-3">Patient Details</h1>
-        <div class="mt-5 mb-5 d-flex justify-content-center align-items-center">
+          <div class="mt-5 mb-5 d-flex justify-content-center align-items-center">
             <div class="card bg-light" style="width: 27rem;">
                 <%for(let i in data.patient_photo){%>
                 <img src="/patients/<%=data.patient_photo[i]%>" class="card-img-top" alt="...">
@@ -24,13 +24,57 @@
                 </div>
               </div>
         </div>
-        <form action="/user/postuserdata" method="POST">
-          <input class="mx-5" type="hidden" name="pid" id="pid" value="<%=data._id%>">
+        
+          <%if(appointment.length>0){%>
+            <h1 class="text-center text-success fw-bold mt-5 mb-4">Your Appointment Details</h1>
+            <div class="mx-5 mt-4 mb-2">
+              <table class="table table-info table-hover">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Doctor Specialization</th>
+                    <th scope="col">Doctor Fees</th>
+                    <th scope="col">Appointment Day</th>
+                    <th scope="col">Appointment Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%for(let obj of appointment){%>
+                    <tr class="text-center">
+                      <td><%=obj.doc_name%></td>
+                      <td><%=obj.doc_specialization%></td>
+                      <td><%=obj.doc_fees%></td>
+                      <td><%=obj.appointment_day%></td>
+                      <td><%=obj.appointment_time%></td>
+                    </tr>
+                  <%}%>
+                </tbody>
+              </table>
+            </div>
+          <%}else{%>
+            <h1 class="text-center text-success fw-bold mt-5 mb-4">Your Appointment Details</h1>
+            <div class="mx-5 mt-5 mb-2">
+              <table class="table table-info table-hover">
+                <thead>
+                  <tr class="text-center">
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Doctor Specialization</th>
+                    <th scope="col">Doctor Fees</th>
+                    <th scope="col">Appointment Day</th>
+                    <th scope="col">Appointment Time</th>
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr class="text-center">
+                      <td colspan="5">No appointments yet</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+          <%}%>
           <div class="mt-5 mb-5 d-flex justify-content-center">
-            <p class="fs-6 mt-3">Get appointment from our doctors?</p>
-            <input type="submit" value="Click here" class="btn btn-sm btn-success mx-2">
+            <p class="fw-semibold">Get appointment from our doctors?</p>
+            <a href="/user/getdoctorlist" class="mx-1 fw-semibold">Click here</a>
           </div>
-          
-        </form>
     </main>
 <%-include('../includes/footer.ejs')%>

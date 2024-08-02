@@ -22,6 +22,10 @@ const DoctorSchema=new Schema({
         type:[String],
         required:true
     },
+    doc_visit_time:{
+        type:[String],
+        required:true
+    },
     doc_fees:{
         type:Number,
         required:true

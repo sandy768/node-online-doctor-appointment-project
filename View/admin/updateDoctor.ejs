@@ -65,6 +65,42 @@
                     </div>
                 </div>
                 <div class="mb-3">
+                  <label for="doc_visit_days" class="form-label">Visiting Time</label>
+                  <div class="mt-2">
+                      <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="11 a.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">11 AM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="12 p.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">12 PM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="1 p.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">1 PM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="2 p.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">2 PM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="4 p.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">4 PM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="6 p.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">6 PM</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" name="up_doc_visit_time" id="up_doc_visit_time" value="8 p.m.">
+                          <label class="form-check-label" for="up_doc_visit_time">8 PM</label>
+                        </div>
+                  </div>
+                  <div class="mt-3 mb-3">
+                    <h5 class="text-secondary bg-warning px-5 py-1">***Previously visiting times--- <span class="text-success"><%=data.doc_visit_time%></span></h5>
+                </div>
+              </div>
+                <div class="mb-3">
                     <label for="up_doc_fees" class="form-label">Doctor Fees (In ₹)</label>
                     <input type="number" class="form-control" name="up_doc_fees" id="up_doc_fees" value="<%=data.doc_fees%>">
                 </div>

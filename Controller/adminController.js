@@ -18,6 +18,7 @@ const postDocForm=async(req,res)=>{
                 doc_experience:req.body.doc_experience.toLowerCase(),
                 doc_specialization:req.body.doc_specialization.toLowerCase(),
                 doc_visit_days:req.body.doc_visit_days,
+                doc_visit_time:req.body.doc_visit_time,
                 doc_fees:req.body.doc_fees,
                 doc_email:req.body.doc_email,
                 doc_photo:req.file.filename,
@@ -69,12 +70,21 @@ const postUpdateDetails=async(req,res)=>{
         let existing_data=await DoctorModel.findById(req.body.up_doc_id);
         console.log("Data to be edited",existing_data);
         existing_data.doc_name=req.body.up_doc_name.toLowerCase()||existing_data.doc_name;
+
         existing_data.doc_degree=req.body.up_doc_degree.toLowerCase()||existing_data.doc_degree;
+
         existing_data.doc_experience=req.body.up_doc_experience.toLowerCase()||existing_data.doc_experience;
+
         existing_data.doc_specialization=req.body.up_doc_specialization.toLowerCase()||existing_data.doc_specialization;
+
         existing_data.doc_visit_days=req.body.up_doc_visit_days||existing_data.doc_visit_days;
+
+        existing_data.doc_visit_time=req.body.up.doc_visit_time||existing_data.doc_visit_time;
+
         existing_data.doc_fees=req.body.up_doc_fees||existing_data.doc_fees;
+
         existing_data.doc_email=req.body.up_doc_email||existing_data.doc_email;
+        
         if(req.file==undefined){
             existing_data.doc_photo=existing_data.doc_photo;
         }
