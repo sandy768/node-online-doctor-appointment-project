@@ -1,4 +1,6 @@
 <%-include('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/doctors.css">
 <title>
     <%=title%>
 </title>
@@ -6,35 +8,37 @@
 <body>
     <%-include('../includes/nav_user.ejs')%>
     <main>
-        <%if(data2.length>0){%>
-            <h1 class="text-center text-success fw-bold mt-5 mb-3">Available Doctors</h1>
-                    <div class="mt-5 mb-5 mx-5 d-flex flex-wrap">
-                        <%for(let i in data2){%>
-                        <div class="card bg-light mx-5" style="width: 20rem;">
-                            <img src="/doctors/<%=data2[i].doc_photo%>" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h4 class="card-title text-center text-secondary fw-bold mx-2">Doctor Name: <span class="text-success"><%=data2[i].doc_name%></span></h4>
-                              <h6 class="card-text text-center text-secondary fw-bold mt-4 mx-2">Degree: <span class="text-success fw-medium"><%=data2[i].doc_degree%> (<%=data2[i].doc_experience%>)</span></h6>
-                              <h6 class="card-text text-center text-secondary fw-bold mt-2 mx-2">Specialization : <span class="text-success fw-medium"><%=data2[i].doc_specialization%></span></h6>
-                              <h6 class="card-text text-center text-secondary fw-bold mt-2 mx-2">Email: <span class="text-success fw-medium"><%=data2[i].doc_email%></span></h6>
-                                
-                                <form action="/user/getappointment" method="POST">
-                                    <div class="d-flex justify-content-center flex-column mt-4 mb-3">
-                                        <input type="hidden" name="pid" id="pid" value="<%=data1._id%>">
-                                        <input type="hidden" name="doc_id" id="doc_id" value="<%=data2[i]._id%>">
-                                        <input type="submit" class="btn btn-lg btn-success" value="Get Appointment">
+            <div id="doctors">
+                <h1 class="para1">Available Doctors</h1>
+            </div>
+                <%if(data2.length>0){%>
+                            <div class="mt-5 mb-5 mx-5 d-flex flex-wrap">
+                                <%for(let i in data2){%>
+                                <div class="card bg-light mx-5 mt-5" style="width: 20rem;">
+                                    <img src="/doctors/<%=data2[i].doc_photo%>" class="card-img-top" alt="...">
+                                    <div class="card-body">
+                                      <h3 class="card-title text-center text-secondary fw-bold mx-2">Dr. <%=data2[i].doc_name%></h3>
+                                      <h5 class="card-text text-center text-secondary fw-bold mt-4 mx-2"><%=data2[i].doc_degree%> (<%=data2[i].doc_experience%>)</h5>
+                                      <h5 class="card-text text-center text-secondary fw-bold mt-2 mx-2"><%=data2[i].doc_specialization%></h5>
+                                      <h5 class="card-text text-center text-secondary fw-bold mt-2 mx-2"><%=data2[i].doc_email%></h5>
+                                        
+                                        <form action="/user/getappointment" method="POST">
+                                            <div class="d-flex justify-content-center flex-column mt-4 mb-3">
+                                                <input type="hidden" name="pid" id="pid" value="<%=data1._id%>">
+                                                <input type="hidden" name="doc_id" id="doc_id" value="<%=data2[i]._id%>">
+                                                <input type="submit" class="btn btn-lg btn-success" value="Get Appointment">
+                                            </div>
+                                        </form>
+                                        
                                     </div>
-                                </form>
-                                
+                                  </div>
+                                <%}%>
                             </div>
-                          </div>
-                        <%}%>
-                    </div>
-                    <div class="mt-2 mb-5">
-                        <p class="text-danger text-center fw-semibold fs-6"><%=error_doc%></p>
-                      </div>
-        <%}else{%>
-            <h1>Data not found</h1>
-        <%}%>
+                            <div class="mt-2 mb-5">
+                                <p class="text-danger text-center fw-semibold fs-6"><%=error_doc%></p>
+                              </div>
+                <%}else{%>
+                    <h1>Data not found</h1>
+                <%}%>
     </main>
     <%-include('../includes/footer.ejs')%>

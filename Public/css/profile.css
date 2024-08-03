@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.appoint{
+    background-image: url('../images/book-appointment.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 300px;
+    position: relative;
+}
+.para1{
+    left: 7%;
+    top: -50%;
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    position: absolute;
+}
+.profileflex{
+    display: flex;
+    gap: 2rem;
+}
+.patientphoto{
+    height: 350px;
+    width: 350px;
+    margin-top: 11rem;
+    margin-left: 10rem;
+}
+.img1{
+    height: 300px;
+    width: 300px;
+    border-radius: 20px;
+}
+.patientdata{
+    /* height: 22rem; */
+    width: 550px;
+    margin-top: 12rem;
+    margin-left: 1rem;
+}
+.patientdetails{
+    height: 13rem;
+}
+.btn1{
+    margin-top: -180px;
+    margin-left: 750px;
+    background-color: rgb(34, 63, 63);
+    color: white;
+    height: 50px;
+    width: 130px;
+    font-size: 18px;
+    /* font-weight: bold; */
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 10px;
+}
+.btn1:hover{
+    background-color:rgb(255, 211, 154);
+    color: rgb(34, 63, 63);
+    border: 1px solid rgb(34, 63, 63);
+    cursor: pointer;
+}
+.para2{
+    margin-left: 28rem;
+    margin-top: 8rem;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+}

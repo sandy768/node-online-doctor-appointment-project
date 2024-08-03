@@ -29,7 +29,6 @@ const getRegistration=(req,res)=>{
 
     res.render('user/registration',{
         title:"Patient Registration",
-        path:'/user/registration',
         email_success:mail_success,
         error_mail:mail_error,
         error_verify:verifyError
@@ -142,7 +141,6 @@ const getLogin=(req,res)=>{
 
     res.render('user/login',{
         title:"Patient Login",
-        path:'/user/viewlogin',
         success_verify:verifySuccess,
         update_password:passUpdate,
         error_pass_match:passMatchErr,

@@ -195,7 +195,7 @@ body{
     word-spacing: 2px;
 }
 #para9{
-    padding-top: 45px;
+    padding-top: 30px;
     text-align: center;
     font-size: 28px;
     font-weight: bold;
@@ -203,4 +203,284 @@ body{
     color: rgb(34, 63, 63);
     letter-spacing: 1px;
     word-spacing: 2px;
+}
+.para10{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color:dimgrey;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#para11{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 65px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color:dimgrey;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#para12{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 70px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color:dimgrey;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+#para13{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 82px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color:dimgrey;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.deptdoc{
+    height:2300px;
+    background-image: url("../images/img1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    z-index: 1;
+}
+.dept{
+    height: 900px;
+    z-index: 2;
+}
+.para14{
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.deptt{
+    display: flex;
+    flex-wrap: wrap;
+}
+.fragment{
+    margin-top: 3rem;
+    margin-left:7rem;
+    height: 220px;
+    width: 250px;
+    background-color: transparent;
+    border: 1px solid rgb(99, 189, 189);
+    border-radius: 10px;
+}
+.fragment:hover{
+    /* background-color: white; */
+    opacity: 0.5;
+    cursor: pointer;
+}
+.icons{
+    padding-top: 3rem;
+    padding-left: 6rem;
+    color:white;
+    font-size: 55px;
+}
+.para15{
+    color: white;
+    padding-top: 2rem;
+    padding-left: 3rem;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+}
+.fragment1{
+    margin-top: 3rem;
+    margin-left:3rem;
+    height: 220px;
+    width: 250px;
+    background-color: transparent;
+    border: 1px solid rgb(99, 189, 189);
+    border-radius: 10px;
+}
+.fragment1:hover{
+    /* background-color: white; */
+    opacity: 0.5;
+    cursor: pointer;
+}
+.para16{
+    color: white;
+    padding-top: 2rem;
+    padding-left: 2.5rem;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+}
+.para17{
+    color: white;
+    padding-top: 2rem;
+    padding-left: 3.5rem;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+}
+.para18{
+    color: white;
+    padding-top: 2rem;
+    padding-left: 5rem;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: bold; */
+    letter-spacing: 1px;
+}
+.doc{
+    height: 900px;
+    z-index: 2;
+}
+.para19{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.docflex{
+    display: flex;
+    flex-wrap: wrap;
+}
+.docs{
+    margin-top: 50px;
+    margin-left: 40px;
+    background-color:sandybrown;
+    border: none;
+}
+.docs:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.contact{
+    height: 600px;
+    background-color:rgb(222, 245, 237);
+}
+.para20{
+    padding-top: 8rem;
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.para21{
+    padding-top: 3rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.btn3{
+    margin-top: 3rem;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    background-color: rgb(34, 63, 63);
+    height: 42px;
+    width: 250px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.btn3:hover{
+    background-color: transparent;
+    border: 2px solid  rgb(34, 63, 63);
+    color: rgb(34, 63, 63);
+    cursor: pointer;
+}
+footer{
+    height: 380px;
+    background-color: rgb(34, 63, 63);
+}
+.footerflex{
+    display: flex;
+    gap: 8rem;
+}
+.footlinks{
+    margin-top: 2rem;
+    margin-left: 5rem;
+}
+.para22{
+    padding-left: 24px;
+    padding-top: 18px;
+    font-size: 16px;
+    /* font-weight: bold; */
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    text-decoration: none;
+}
+.para23{
+    padding-left: 20px;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    font-size: 21px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+.footsocial{
+    margin-top: 12rem;
+}
+#social{
+    padding-left: 100px;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+}
+#social1{
+    padding-left: 35px;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+}
+#social2{
+    padding-left: 35px;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+}
+#social3{
+    padding-left: 35px;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
+}
+#social4{
+    padding-left: 35px;
+    padding-top: 40px;
+    font-size: 50px;
+    color: white;
 }

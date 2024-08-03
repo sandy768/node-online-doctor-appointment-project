@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.appointment{
+    background-image: url('../images/doc_appointment.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 1000px;
+    position: relative;
+}
+.form1{
+    position: absolute;
+    top:10%;
+    left:30%;
+    bottom: 20%;
+    height: 800px;
+    width:500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 5px 3px 3px rgb(95, 95, 95);
+}
+.para1{
+    color: rgb(34, 63, 63);
+}
+.btn1{
+    background-color: rgb(34, 63, 63);
+    color: white;
+}
+.btn1:hover{
+    background-color: white;
+    color: rgb(34, 63, 63);
+    border: 1px solid rgb(34, 63, 63);
+    cursor: pointer;
+}

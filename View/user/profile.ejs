@@ -1,4 +1,6 @@
 <%-include('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/home.css">
+<link rel="stylesheet" href="/css/profile.css">
 <title>
     <%=title%>
 </title>
@@ -6,27 +8,33 @@
 <body>
     <%-include('../includes/nav_user.ejs')%>
     <main>
-        
-        <h1 class="text-center text-success fw-bold mt-3 mb-3">Patient Details</h1>
-          <div class="mt-5 mb-5 d-flex justify-content-center align-items-center">
-            <div class="card bg-light" style="width: 27rem;">
-                <%for(let i in data.patient_photo){%>
-                <img src="/patients/<%=data.patient_photo[i]%>" class="card-img-top" alt="...">
-                <%}%>
-                <div class="card-body">
-                  <h4 class="card-title text-secondary fw-bold mx-2">Patient Name: <span class="text-success"><%=data.patient_name%></span></h4>
-                  <h5 class="card-text text-secondary fw-bold mx-2">Patient Gender: <span class="text-success fw-medium"><%=data.patient_gender%></span></h5>
-                  <h5 class="card-text text-secondary fw-bold mx-2">Patient Age: <span class="text-success fw-medium"><%=data.patient_age%></span></h5>
-                  <h5 class="card-text text-secondary fw-bold mx-2">Patient Email: <span class="text-success fw-medium"><%=data.patient_email%></span></h5>
-                  <div class="d-flex justify-content-center mt-3 mb-2">
-                    <a href="/user/logout" class="btn btn-lg btn-danger">Log Out</a>
-                  </div>
-                </div>
-              </div>
+        <div class="appoint">
+          <h1 class="para1">Your Profile & Appointments</h1>
         </div>
+
+          <div class="profileflex">
+            <div class="patientphoto">
+              <%for(let i in data.patient_photo){%>
+                <img src="/patients/<%=data.patient_photo[i]%>" class="img1" alt="...">
+                <%}%>
+            </div>
+            <div class="patientdata">
+              <table class="table table-hover patientdetails">
+                <tbody>
+                    <tr class="text-center table-warning"><th class="fw-bold">NAME ::</th><td><%=data.patient_name%></td></tr>
+                    <tr class="text-center table-info"><th class="fw-bold">GENDER ::</th><td><%=data.patient_gender%></td></tr>
+                    <tr class="text-center table-warning"><th class="fw-bold">AGE ::</th><td><%=data.patient_age%></td></tr>
+                    <tr class="text-center table-info"><th class="fw-bold">EMAIL ::</th><td><%=data.patient_email%></td></tr>
+                </tbody>
+            </table>
+            </div>
+          </div>
+          <div class="mb-2">
+            <a href="/user/logout" class="btn btn-lg btn1">Log Out</a>
+          </div>
         
           <%if(appointment.length>0){%>
-            <h1 class="text-center text-success fw-bold mt-5 mb-4">Your Appointment Details</h1>
+            <h1 class="text-center para2">Your Appointment Details</h1>
             <div class="mx-5 mt-4 mb-2">
               <table class="table table-info table-hover">
                 <thead>
@@ -52,7 +60,7 @@
               </table>
             </div>
           <%}else{%>
-            <h1 class="text-center text-success fw-bold mt-5 mb-4">Your Appointment Details</h1>
+            <h1 class="para2">Your Appointment Details</h1>
             <div class="mx-5 mt-5 mb-2">
               <table class="table table-info table-hover">
                 <thead>

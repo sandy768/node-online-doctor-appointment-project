@@ -3,11 +3,19 @@ const doctorModel=require('../Model/doctorModel');
 const appointmentModel=require('../Model/appointment');
 const jwt=require('jsonwebtoken');
 
-const userHome=(req,res)=>{
-    res.render('user/home',{
-        title:"Swasth Rakshak",
-        path:'/user/home'
-    })
+const userHome=async(req,res)=>{
+    try{
+        let doc_details=await doctorModel.find();
+            res.render('user/home',{
+                title:"Swasth Rakshak",
+                path:'/user/home',
+                data:doc_details
+            })
+    }
+    catch(err){
+        console.log("Error to fetch doctor data",err);
+        
+    }
 }
 
 const userAuth=async(req,res,next)=>{

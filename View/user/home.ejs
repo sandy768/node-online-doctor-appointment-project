@@ -7,6 +7,8 @@
 <body>
     <%-include('../includes/nav_user.ejs')%>
     <main>
+
+      <!-- banner section -->
         <section>
             <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-inner">
@@ -36,6 +38,8 @@
                 </button>
               </div>
         </section>
+
+        <!-- about section -->
         <section class="about">
             <div class="d-flex">
                 <div id="abt1">
@@ -54,10 +58,78 @@
                         </div>
                         <div class="card-body">
                           <p id="para9">Opening Hours</p>
+                          <p class="para10">Weekdays <span id="para11">10:00-20:00</span></p>
+                          <hr class="ms-4 me-4 text-dark">
+                          <p class="para10">Saturday <span id="para12">10:00-17:30</span></p>
+                          <hr class="ms-4 me-4 text-dark">
+                          <p class="para10">Sunday <span id="para13">10:00-15:00</span></p>
                         </div>
                       </div>
                 </div>
             </div>
         </section>
+        
+        <!-- department & doctor section -->
+         <section class="deptdoc">
+          <div class="dept">
+            <p class="para14">Departments</p>
+            <div class="deptt">
+              <div class="fragment">
+                <i class="fa-solid icons fa-heart-pulse"></i>
+                <p class="para15">CARDIOLOGY</p>
+              </div>
+              <div class="fragment1">
+                <i class="fa-solid icons fa-eye"></i>
+                <p class="para16">OPTHALMOLOGY</p>
+              </div>
+              <div class="fragment1">
+                <i class="fa-solid icons fa-brain"></i>
+                <p class="para17">NEUROLOGY</p>
+              </div>
+              <div class="fragment1">
+                <i class="fa-solid icons fa-bone"></i>
+                <p class="para17">ORTHOPEDIC</p>
+              </div>
+              <div class="fragment">
+                <i class="fa-solid icons fa-venus"></i>
+                <p class="para15">GYNOCOLOGY</p>
+              </div>
+              <div class="fragment1">
+                <i class="fa-solid icons fa-user-doctor"></i>
+                <p class="para17">PULMONARY</p>
+              </div>
+              <div class="fragment1">
+                <i class="fa-solid icons fa-tooth"></i>
+                <p class="para18">DENTIST</p>
+              </div>
+              <div class="fragment1">
+                <i class="fa-solid icons fa-stethoscope"></i>
+                <p class="para15">DIAGNOSTICS</p>
+              </div>
+            </div>
+          </div>
+          <div class="doc">
+            <p class="para19">Our Doctors</p>
+              <div class="docflex">
+                <%for(let i in data){%>
+                <div class="card docs" style="width: 18rem;">
+                    <img src="/doctors/<%=data[i].doc_photo%>" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h4 class="card-title text-center text-dark fw-bold mx-2">Dr. <%=data[i].doc_name%></h4>
+                      <h6 class="card-text text-center text-dark fw-bold mt-4 mx-2"><%=data[i].doc_degree%> (<%=data[i].doc_experience%>)</h6>
+                      <h6 class="card-text text-center text-dark fw-bold mt-2 mx-2"><%=data[i].doc_specialization%></h6>
+                    </div>
+                  </div>
+                  <%}%>
+              </div>
+            </div>
+         </section>
+         <section class="contact">
+            <p class="para20">Connect With Us</p>
+            <p class="para21">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque.</p>
+            <div class="d-flex justify-content-center">
+              <a href="#" class="btn btn3">ENQUIRE NOW <i class="fa-solid fa-circle-arrow-right"></i></a>
+            </div>
+          </section>
     </main>
 <%-include('../includes/footer.ejs')%>
