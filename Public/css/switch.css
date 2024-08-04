@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.switch{
+    background-image: url('../images/reg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 700px;
+    position: relative;
+}
+.switchbtn{
+    position: absolute;
+    /* top:10%; */
+    left:40%;
+    /* bottom: 20%; */
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:transparent;
+    
+}
+.btn:hover{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}

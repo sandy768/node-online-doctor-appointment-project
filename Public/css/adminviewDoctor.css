@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#admin_doctor{
+    background-image: url('../images/banner2.jpg');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 300px;
+    position: relative;
+}
+.para1{
+    left: 38%;
+    top: 42%;
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    position: absolute;
+}
+.doc_table{
+    margin-top: 10rem;
+}

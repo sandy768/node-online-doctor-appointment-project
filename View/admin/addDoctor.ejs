@@ -1,16 +1,16 @@
 <%-include('../includes/header.ejs')%>
 <link rel="stylesheet" href="/js/multiselect.js">
+<link rel="stylesheet" href="/css/addDoctor.css">
 <title>
     <%=title%>
 </title>
 </head>
 <body>
-    <%-include('../includes/nav_admin.ejs')%>
     <main>
-        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Admin Only</h1>
-        <h2 class="text-center text-secondary fw-semibold mb-3">Add Doctor</h2>
-        <div class="mt-5 mb-5 mx-3">
+        <div class="regis">
+          <div class="form1">
             <form action="/admin/docpostdata" method="POST" enctype="multipart/form-data" autocomplete="off">
+              <h2 class="text-center fw-semibold mb-5 para1">Add Doctor</h2>
                 <div class="mb-3">
                   <label for="fname" class="form-label">Doctor First Name</label>
                   <input type="text" class="form-control" name="fname" id="fname" placeholder="Doctor First Name">
@@ -110,8 +110,13 @@
                     <input type="file" class="form-control" name="doc_photo" id="doc_photo">
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-lg btn-primary">Add Doctor</button>
+                    <button type="submit" class="btn btn1 mt-3 form-control">Add Doctor</button>
                 </div>
+                <div class="d-flex justify-content-center">
+                  <a href="/" class="mt-4">Back to Switch Page</a>
+              </div>
               </form>
         </div>
+        </div>
+        
     </main>

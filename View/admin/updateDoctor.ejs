@@ -1,5 +1,6 @@
 <%-include('../includes/header.ejs')%>
 <link rel="stylesheet" href="/js/multiselect.js">
+<link rel="stylesheet" href="/css/updateDoctor.css">
 <title>
     <%=title%>
 </title>
@@ -7,10 +8,10 @@
 <body>
     <%-include('../includes/nav_admin.ejs')%>
     <main>
-        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Admin Only</h1>
-        <h2 class="text-center text-secondary fw-semibold mb-3">Update Doctor Details</h2>
-        <div class="mt-5 mb-5 mx-3">
+        <div class="update_doc">
+          <div class="form2">
             <form action="/admin/updateddetails" method="POST" enctype="multipart/form-data" autocomplete="off">
+              <h2 class="text-center para1 fw-semibold mb-5">Update Doctor Details</h2>
                 <input type="hidden" name="up_doc_id" id="up_doc_id" value="<%=data._id%>">
                 <div class="mb-3">
                   <label for="up_fname" class="form-label">Doctor First Name</label>
@@ -118,8 +119,13 @@
                     <input type="file" class="form-control" name="doc_photo" id="doc_photo">
                 </div>
                 <div class="d-flex justify-content-center">
-                    <button type="submit" class="btn btn-lg btn-primary">Update Doctor</button>
+                    <button type="submit" class="btn btn1 mt-3 form-control">Update Doctor</button>
                 </div>
+                <div class="d-flex justify-content-center">
+                  <a href="/admin/viewdoctors" class="mt-4">Back to Doctors List Page</a>
+              </div>
               </form>
         </div>
+        </div>
+        
     </main>

@@ -53,7 +53,7 @@ const patientProfile=async(req,res)=>{
         let appointment_details=await appointmentModel.find();
         // console.log("Patient Profile:",req.user);
         res.render('user/profile',{
-            title:"About Patient",
+            title:"Your Profile",
             path:'/user/viewProfile',
             data:patient_data,
             appointment:appointment_details

@@ -1,4 +1,6 @@
 <%-include('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/adminviewDoctor.css">
+<title>
 <title>
     <%=title%>
 </title>
@@ -6,10 +8,11 @@
 <body>
     <%-include('../includes/nav_admin.ejs')%>
     <main>
-        <h1 class="text-center text-success fw-bold mt-3 mb-2">For Admin Only</h1>
-        <h2 class="text-center text-secondary fw-semibold mb-3">All Doctors List</h2>
+        <div id="admin_doctor">
+            <h1 class="para1">Doctors List</h1>
+        </div>
         <%if(data.length>0){%>
-            <div class="mt-5 mb-5 ms-5 me-5">
+            <div class="doc_table ms-5 me-5">
                 <table class="table table-success table-hover" cellpadding="5px">
                     <thead>
                       <tr class="text-center">
@@ -61,7 +64,7 @@
                     </tbody>
                   </table>
                   <div class="mt-5 mb-5 d-flex justify-content-center">
-                    <a href="/" class="btn btn-lg btn-success">Return To Home Page</a>
+                    <a href="/" class="btn btn-lg btn-success">Back To Switch Page</a>
                   </div>
             </div>
         <%}else{%>

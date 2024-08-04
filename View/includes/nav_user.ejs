@@ -1,7 +1,9 @@
 <header>
     <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
         <div class="container-fluid">
-          <a class="navbar-brand text-light mt-2" href="#">Navbar Logo</a>
+          <% if(path==='/user/home'){%>
+          <a class="navbar-brand text-light mt-2" href="/"><img src="/images/icon.png" class="proj_icon" alt=""><span class="proj_title">Swasth<span class="sub_title">Rakshak</span></span></a>
+          <%}%>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -10,7 +12,7 @@
               <li class="nav-item ms-5">
                 <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/home'?'active_nav':' '%>" aria-current="page" href="/user/home">Home</a>
               </li>
-              <li class="nav-item ms-5">
+              <li class="nav-item ms-3">
                 <a class="nav-link text-light fw-semibold fs-5 <%=path==='/user/aboutus'?'active_nav':' '%>" aria-current="page" href="/user/aboutus">About Us</a>
               </li>
               <li class="nav-item ms-3">
