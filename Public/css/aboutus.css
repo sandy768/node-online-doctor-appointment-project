@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.aboutus{
+    background-image: url('../images/book-appointment.jpeg');
+    background-size:cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 300px;
+    position: relative;
+}
+.para1{
+    left: 23%;
+    top: -50%;
+    color:white;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    position: absolute;
+}
+.abtpara{
+    height: 700px;
+    display: flex;
+    gap: 6rem;
+}
+#abt1{
+    height: 300px;
+    width: 800px;
+}
+.para3{
+    padding-top: 8rem;
+    padding-left: 12rem;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.para4{
+    padding-top: 3rem;
+    padding-left: 12rem;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.para5{
+    padding-top: 1rem;
+    padding-left: 12rem;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(34, 63, 63);
+    letter-spacing: 1px;
+    word-spacing: 2px;
+}
+.abtphoto{
+    margin-top: 8rem;
+    background-image: url("../images/banner2.jpg");
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color:rgb(34, 63, 63);
+    background-blend-mode:multiply;
+    opacity: 0.7;
+    height: 450px;
+    width: 370px;
+    border-radius: 20px;
+}

@@ -21,8 +21,8 @@
             <div class="patientdata">
               <table class="table table-hover patientdetails">
                 <tbody>
-                    <tr class="text-center table-warning"><th class="fw-bold">NAME ::</th><td><%=data.patient_name%></td></tr>
-                    <tr class="text-center table-info"><th class="fw-bold">GENDER ::</th><td><%=data.patient_gender%></td></tr>
+                    <tr class="text-center table-warning"><th class="fw-bold">NAME ::</th><td><%=data.fname.charAt(0).toUpperCase()+data.fname.slice(1)%> <%=data.lname.charAt(0).toUpperCase()+data.lname.slice(1)%></td></tr>
+                    <tr class="text-center table-info"><th class="fw-bold">GENDER ::</th><td><%=data.patient_gender.charAt(0).toUpperCase()+data.patient_gender.slice(1)%></td></tr>
                     <tr class="text-center table-warning"><th class="fw-bold">AGE ::</th><td><%=data.patient_age%></td></tr>
                     <tr class="text-center table-info"><th class="fw-bold">EMAIL ::</th><td><%=data.patient_email%></td></tr>
                 </tbody>
@@ -60,7 +60,7 @@
               </table>
             </div>
           <%}else{%>
-            <h1 class="para2">Your Appointment Details</h1>
+            <h1 class="text-center para2">Your Appointment Details</h1>
             <div class="mx-5 mt-5 mb-2">
               <table class="table table-info table-hover">
                 <thead>
@@ -86,3 +86,6 @@
           </div>
     </main>
 <%-include('../includes/footer.ejs')%>
+<div class="container-fluid footer2">
+  <p class="para24">Copyright <i class="bi bi-c-circle" id="copyright"></i>2024 All rights reserved | This template is made with <i class="bi bi-heart" id="heart"> by<span class="maker"> Sandipto</span></i></p>
+</div>

@@ -13,7 +13,8 @@ const postDocForm=async(req,res)=>{
         let mail=await DoctorModel.findOne({doc_email:req.body.doc_email});
         if(!mail){
             let doc_details=new DoctorModel({
-                doc_name:req.body.doc_name.toLowerCase(),
+                fname:req.body.fname.toLowerCase(),
+                lname:req.body.lname.toLowerCase(),
                 doc_degree:req.body.doc_degree.toLowerCase(),
                 doc_experience:req.body.doc_experience.toLowerCase(),
                 doc_specialization:req.body.doc_specialization.toLowerCase(),
@@ -69,7 +70,9 @@ const postUpdateDetails=async(req,res)=>{
     try{
         let existing_data=await DoctorModel.findById(req.body.up_doc_id);
         console.log("Data to be edited",existing_data);
-        existing_data.doc_name=req.body.up_doc_name.toLowerCase()||existing_data.doc_name;
+        existing_data.fname=req.body.up_fname.toLowerCase()||existing_data.fname;
+
+        existing_data.lname=req.body.up_lname.toLowerCase()||existing_data.lname;
 
         existing_data.doc_degree=req.body.up_doc_degree.toLowerCase()||existing_data.doc_degree;
 
@@ -79,7 +82,7 @@ const postUpdateDetails=async(req,res)=>{
 
         existing_data.doc_visit_days=req.body.up_doc_visit_days||existing_data.doc_visit_days;
 
-        existing_data.doc_visit_time=req.body.up.doc_visit_time||existing_data.doc_visit_time;
+        existing_data.doc_visit_time=req.body.up_doc_visit_time||existing_data.doc_visit_time;
 
         existing_data.doc_fees=req.body.up_doc_fees||existing_data.doc_fees;
 

@@ -14,15 +14,15 @@
                     <input type="hidden" name="doc_id" id="doc_id" value="<%=data1._id%>">
                         <div class="mt-3 mb-3">
                             <label for="patient_name" class="form-label">Patient Name</label>
-                            <input type="text" class="form-control" name="patient_name" id="patient_name" value="<%=data2.patient_name%>" readonly>
+                            <input type="text" class="form-control" name="patient_name" id="patient_name" value="<%=data2.fname.charAt(0).toUpperCase()+data2.fname.slice(1)%> <%=data2.lname.charAt(0).toUpperCase()+data2.lname.slice(1)%>" readonly>
                         </div>
                         <div class="mt-3 mb-3">
                             <label for="doc_name" class="form-label">Doctor Name</label>
-                            <input type="text" class="form-control" name="doc_name" id="doc_name" value="<%=data1.doc_name%>" readonly>
+                            <input type="text" class="form-control" name="doc_name" id="doc_name" value="<%=data1.fname.charAt(0).toUpperCase()+data1.fname.slice(1)%> <%=data1.lname.charAt(0).toUpperCase()+data1.lname.slice(1)%>" readonly>
                         </div>
                         <div class="mt-3 mb-3">
                             <label for="doc_specialization" class="form-label">Specialization</label>
-                            <input type="text" class="form-control" name="doc_specialization" id="doc_specialization" value="<%=data1.doc_specialization%>" readonly>
+                            <input type="text" class="form-control" name="doc_specialization" id="doc_specialization" value="<%=data1.doc_specialization.charAt(0).toUpperCase()+data1.doc_specialization.slice(1)%>" readonly>
                         </div>
                         <div class="mt-3 mb-3">
                             <label for="doc_fees" class="form-label">Doctor Fees</label>
@@ -36,7 +36,7 @@
                                     <select class="form-select" aria-label="Default select example" name="appointment_day" id="appointment_day" >
                                         <option selected>---Select Appointment Day---</option>
                                         <%for(let i in data1.doc_visit_days){%>
-                                        <option value="<%=data1.doc_visit_days[i]%>"><%=data1.doc_visit_days[i]%></option>
+                                        <option value="<%=data1.doc_visit_days[i].charAt(0).toUpperCase()+data1.doc_visit_days[i].slice(1)%>"><%=data1.doc_visit_days[i].charAt(0).toUpperCase()+data1.doc_visit_days[i].slice(1)%></option>
                                         <%}%>
                                       </select>
                                 </div>

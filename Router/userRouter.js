@@ -23,7 +23,9 @@ logOut,
 userHome,
 getDoctorList,
 getDocAppointment,
-postDocAppointment
+postDocAppointment,
+aboutus,
+contact
 } = require('../Controller/userDashboard');
 
 const fileStorage=multer.diskStorage({
@@ -63,6 +65,12 @@ const upload_type=upload.fields([
 
 // home page
 router.get('/user/home',userHome);
+
+//about us page
+router.get('/user/aboutus',aboutus);
+
+// contact us page
+router.get('/user/contact',contact);
 
 // user registration
 router.get('/user/registration',getRegistration);

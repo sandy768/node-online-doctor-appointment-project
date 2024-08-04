@@ -13,8 +13,12 @@
             <form action="/admin/updateddetails" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <input type="hidden" name="up_doc_id" id="up_doc_id" value="<%=data._id%>">
                 <div class="mb-3">
-                  <label for="up_doc_name" class="form-label">Doctor Name</label>
-                  <input type="text" class="form-control" name="up_doc_name" id="up_doc_name" value="<%=data.doc_name%>">
+                  <label for="up_fname" class="form-label">Doctor First Name</label>
+                  <input type="text" class="form-control" name="up_fname" id="up_fname" value="<%=data.fname%>">
+                </div>
+                <div class="mb-3">
+                  <label for="up_lname" class="form-label">Doctor Last Name</label>
+                  <input type="text" class="form-control" name="up_lname" id="up_lname" value="<%=data.lname%>">
                 </div>
                 <div class="mb-3">
                     <label for="up_doc_degree" class="form-label">Doctor Degree</label>
@@ -22,7 +26,7 @@
                 </div>
                 <div class="mb-3">
                     <label for="up_doc_experience" class="form-label">Doctor Experience</label>
-                    <input type="text" class="form-control" name="up_doc_experience" id="up_doc_experience" value="<%=data.doc_experience%>">
+                    <input type="number" class="form-control" name="up_doc_experience" id="up_doc_experience" value="<%=data.doc_experience%> Years">
                 </div>
                 <div class="mb-3">
                     <label for="up_doc_specialization" class="form-label">Doctor Specialization</label>
@@ -119,4 +123,3 @@
               </form>
         </div>
     </main>
-<%-include('../includes/footer.ejs')%>

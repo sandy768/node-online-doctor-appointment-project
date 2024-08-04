@@ -2,7 +2,11 @@ const mongoose=require('mongoose');
 const Schema=mongoose.Schema;
 
 const DoctorSchema=new Schema({
-    doc_name:{
+    fname:{
+        type:String,
+        required:true
+    },
+    lname:{
         type:String,
         required:true
     },
@@ -11,7 +15,7 @@ const DoctorSchema=new Schema({
         required:true
     },
     doc_experience:{
-        type:String,
+        type:Number,
         required:true
     },
     doc_specialization:{

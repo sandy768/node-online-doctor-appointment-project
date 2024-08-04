@@ -42,7 +42,8 @@ const postRegistration=async(req,res)=>{
             let hashPassword=await bcrypt.hash(req.body.patient_password,12);
             let user_docs=req.files.patient_docs.map(img=>img.filename)
             let patientDetails=new patientModel({
-                patient_name:req.body.patient_name.toLowerCase(),
+                fname:req.body.fname.toLowerCase(),
+                lname:req.body.lname.toLowerCase(),
                 patient_age:req.body.patient_age,
                 patient_gender:req.body.patient_gender,
                 patient_city:req.body.patient_city.toLowerCase(),

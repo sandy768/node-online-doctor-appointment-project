@@ -249,7 +249,7 @@ body{
     word-spacing: 2px;
 }
 .deptdoc{
-    height:2300px;
+    height:2180px;
     background-image: url("../images/img1.jpg");
     background-size: cover;
     background-position: center;
@@ -483,4 +483,29 @@ footer{
     padding-top: 40px;
     font-size: 50px;
     color: white;
+}
+.footer2{
+    height: 85px;
+    background-color: black;
+}
+.para24{
+    padding-top: 32px;
+    text-align: center;
+    font-size: 16px;
+    color: lightgray;
+}
+#copyright{
+    color: lightgray;
+    padding-top: 32px;
+    font-size: 16px;
+}
+#heart{
+    color: lightgray;
+    padding-top: 32px;
+    font-size: 16px;
+}
+.maker{
+    padding-top: 32px;
+    font-size: 16px;
+    color: skyblue;
 }

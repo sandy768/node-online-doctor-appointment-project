@@ -18,6 +18,20 @@ const userHome=async(req,res)=>{
     }
 }
 
+const aboutus=(req,res)=>{
+    res.render('user/about_us',{
+        title:"About Us",
+        path:'/user/aboutus'
+    })
+}
+
+const contact=(req,res)=>{
+    res.render('user/contact',{
+        title:"Contact Us",
+        path:'/user/contact'
+    })
+}
+
 const userAuth=async(req,res,next)=>{
     try{
         if(req.user){
@@ -122,6 +136,8 @@ const postDocAppointment=async(req,res)=>{
 
 module.exports={
     userHome,
+    aboutus,
+    contact,
     userAuth,
     patientProfile,
     logOut,

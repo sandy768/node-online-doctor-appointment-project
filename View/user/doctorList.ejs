@@ -17,9 +17,11 @@
                                 <div class="card bg-light mx-5 mt-5" style="width: 20rem;">
                                     <img src="/doctors/<%=data2[i].doc_photo%>" class="card-img-top" alt="...">
                                     <div class="card-body">
-                                      <h3 class="card-title text-center text-secondary fw-bold mx-2">Dr. <%=data2[i].doc_name%></h3>
-                                      <h5 class="card-text text-center text-secondary fw-bold mt-4 mx-2"><%=data2[i].doc_degree%> (<%=data2[i].doc_experience%>)</h5>
-                                      <h5 class="card-text text-center text-secondary fw-bold mt-2 mx-2"><%=data2[i].doc_specialization%></h5>
+                                      <h3 class="card-title text-center text-secondary fw-bold mx-2">Dr. <%=data2[i].fname.charAt(0).toUpperCase()+data2[i].fname.slice(1)%>
+                                        <%=data2[i].lname.charAt(0).toUpperCase()+data2[i].lname.slice(1)%>
+                                      </h3>
+                                      <h5 class="card-text text-center text-secondary fw-bold mt-4 mx-2"><%=data2[i].doc_degree.toUpperCase()%> (<%=data2[i].doc_experience%> Years)</h5>
+                                      <h5 class="card-text text-center text-secondary fw-bold mt-2 mx-2"><%=data2[i].doc_specialization.charAt(0).toUpperCase()+data2[i].doc_specialization.slice(1)%></h5>
                                       <h5 class="card-text text-center text-secondary fw-bold mt-2 mx-2"><%=data2[i].doc_email%></h5>
                                         
                                         <form action="/user/getappointment" method="POST">
@@ -41,4 +43,7 @@
                     <h1>Data not found</h1>
                 <%}%>
     </main>
-    <%-include('../includes/footer.ejs')%>
+<%-include('../includes/footer.ejs')%>
+<div class="container-fluid footer2">
+    <p class="para24">Copyright <i class="bi bi-c-circle" id="copyright"></i>2024 All rights reserved | This template is made with <i class="bi bi-heart" id="heart"> by<span class="maker"> Sandipto</span></i></p>
+</div>

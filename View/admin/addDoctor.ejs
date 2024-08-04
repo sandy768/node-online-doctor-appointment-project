@@ -12,16 +12,20 @@
         <div class="mt-5 mb-5 mx-3">
             <form action="/admin/docpostdata" method="POST" enctype="multipart/form-data" autocomplete="off">
                 <div class="mb-3">
-                  <label for="doc_name" class="form-label">Doctor Name</label>
-                  <input type="text" class="form-control" name="doc_name" id="doc_name" placeholder="Doctor Name">
+                  <label for="fname" class="form-label">Doctor First Name</label>
+                  <input type="text" class="form-control" name="fname" id="fname" placeholder="Doctor First Name">
+                </div>
+                <div class="mb-3">
+                  <label for="lname" class="form-label">Doctor Last Name</label>
+                  <input type="text" class="form-control" name="lname" id="lname" placeholder="Doctor Last Name">
                 </div>
                 <div class="mb-3">
                     <label for="doc_degree" class="form-label">Doctor Degree</label>
                     <input type="text" class="form-control" name="doc_degree" id="doc_degree" placeholder="Doctor Degree (e.g. MBBS)">
                 </div>
                 <div class="mb-3">
-                    <label for="doc_experience" class="form-label">Doctor Experience</label>
-                    <input type="text" class="form-control" name="doc_experience" id="doc_experience" placeholder="Doctor Experience (In years)">
+                    <label for="doc_experience" class="form-label">Doctor Experience (In Years)</label>
+                    <input type="number" class="form-control" name="doc_experience" id="doc_experience" placeholder="Doctor Experience (In years)">
                 </div>
                 <div class="mb-3">
                     <label for="doc_specialization" class="form-label">Doctor Specialization</label>
@@ -111,4 +115,3 @@
               </form>
         </div>
     </main>
-<%-include('../includes/footer.ejs')%>

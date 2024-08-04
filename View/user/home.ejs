@@ -115,9 +115,9 @@
                 <div class="card docs" style="width: 18rem;">
                     <img src="/doctors/<%=data[i].doc_photo%>" class="card-img-top" alt="...">
                     <div class="card-body">
-                      <h4 class="card-title text-center text-dark fw-bold mx-2">Dr. <%=data[i].doc_name%></h4>
-                      <h6 class="card-text text-center text-dark fw-bold mt-4 mx-2"><%=data[i].doc_degree%> (<%=data[i].doc_experience%>)</h6>
-                      <h6 class="card-text text-center text-dark fw-bold mt-2 mx-2"><%=data[i].doc_specialization%></h6>
+                      <h4 class="card-title text-center text-dark fw-bold mx-2">Dr. <%=data[i].fname.charAt(0).toUpperCase()+data[i].fname.slice(1)%> <%=data[i].lname.charAt(0).toUpperCase()+data[i].lname.slice(1)%></h4>
+                      <h6 class="card-text text-center text-dark fw-bold mt-4 mx-2"><%=data[i].doc_degree.toUpperCase()%> (<%=data[i].doc_experience%> Years)</h6>
+                      <h6 class="card-text text-center text-dark fw-bold mt-2 mx-2"><%=data[i].doc_specialization.charAt(0).toUpperCase()+data[i].doc_specialization.slice(1)%></h6>
                     </div>
                   </div>
                   <%}%>
@@ -133,3 +133,6 @@
           </section>
     </main>
 <%-include('../includes/footer.ejs')%>
+<div class="container-fluid footer2">
+  <p class="para24">Copyright <i class="bi bi-c-circle" id="copyright"></i>2024 All rights reserved | This template is made with <i class="bi bi-heart" id="heart"> by<span class="maker"> Sandipto</span></i></p>
+</div>
