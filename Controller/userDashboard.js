@@ -67,7 +67,7 @@ const patientProfile=async(req,res)=>{
 const logOut=async(req,res)=>{
     let destroyed=await res.clearCookie('token_data');
     // console.log("Destroyed:",destroyed);
-    res.redirect('/user/viewlogin');
+    res.redirect('/user/home');
 }
 
 const getDoctorList=async(req,res)=>{

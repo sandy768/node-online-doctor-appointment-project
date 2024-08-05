@@ -68,7 +68,7 @@ const postRegistration=async(req,res)=>{
                     from:'sandiptomajumdar@gmail.com',
                     to:req.body.patient_email,
                     subject:'Email Verification',
-                    text:'Hello'+" "+req.body.patient_name+'\n\n'+
+                    text:'Hello'+" "+req.body.fname.charAt(0).toUpperCase()+req.body.fname.slice(1)+'\n\n'+
                     '\n\nYou have successfully submitted your details to be registered. Please verify your email by clicking this link:\n'+
                     'http://'+
                     req.headers.host+
@@ -173,7 +173,7 @@ const postLogin=async(req,res)=>{
             }
         }
         else{
-            req.flash('err-mail-match','Invalid Email Id');
+            req.flash('err-mail-match','Invalid User');
             res.redirect('/user/viewlogin');
         }
     }
@@ -203,7 +203,7 @@ const postEmail=async(req,res)=>{
                 from:'sandiptomajumdar@gmail.com',
                 to:req.body.email,
                 subject:'Password Recovery',
-                text:'Hello'+" "+patient_data.patient_name+'\n'+
+                text:'Hello'+" "+patient_data.fname.charAt(0).toUpperCase()+patient_data.fname.slice(1)+'\n'+
                 '\n\nPlease recover your password by clicking this link:\n'+
                 'http://'+
                 req.headers.host+
